@@ -1,0 +1,19 @@
+/*@charset "windows-1255";*/
+ 
+
+
+body{
+    background-color:aliceblue;
+}
+
+p {
+    color: brown;
+    background-color:aqua;
+}
+
+
+
+.main_logo {
+    float: left;
+}
+

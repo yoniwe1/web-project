@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+ 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+
+    <script type="text/javascript" src="lib/jquery/jquery-3.2.1.js"></script>
+    <script src="lib/angular/angular16.js"></script>
+
+
+         <link rel="stylesheet" type="text/css" href="Pages/desginCSS/main.css">
+    <script type="text/javascript" src="Pages/Jquery/jquery.js"></script> 
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+    
+    
+       <script src="Pages/angular/app/app.js"></script>
+        <script src="Pages/angular/contollers/ProductsController.js"></script>
+          <script src="Pages/angular/services/service.js"></script>
+
+
+<meta charset="windows-1255">
+<title>Insert title here</title>
+
+</head>
+<body data-ng-app="app" ng-controller="ProductsController"  ng-init=init();><
+
+
+ <nav class="navbar navbar-expand-lg navbar-light bg-light" ng-hide=isLoginPage>
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#" ng-click="linkTo('home')">Home <span class="sr-only">(current)</span></a>
+        
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="#" ng-click="linkTo('about')">About</a>
+      </li>
+      
+      <li class="nav-item">
+        <a class="nav-link" href="#" ng-click="linkTo('login')">Link</a>
+      </li>
+            <li class="nav-item">
+        <a class="nav-link" href="#" ng-click="getUsers();linkTo('Users')">Users</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+    <main role="main">
+
+<section class="jumbotron text-center" ng-hide=isLoginPage>
+        <div class="container">
+          <h1 class="jumbotron-heading">RTC - Books Store</h1>
+          <p class="lead text-muted">Here you can find alot kinds of books Here you can find alot kinds of books Here you can find alot kinds of books Here you can find alot kinds of books </p>
+          <p>
+            <a href="#" class="btn btn-primary">Main call to action</a>
+            <a href="#" class="btn btn-secondary">Secondary action</a>
+          </p>
+        </div>
+      </section>
+      
+<form action="queriesDB" method="post">
+enter user:<input type="text" name="user"/><br>
+enter password:<input type="text" name="password"/>
+<input type="submit"/>
+</form>
+ <div id="container" class="container" ng-include="currentUrl"></div>  
+       <h1>AAAAAA</h1>
+       <fieldset>
+       <legend>Demo 1 </legend>
+       <input type="button" value="Display Object" id="button1">
+       <br>
+       <div id="result1"></div>
+       
+       </fieldset>
+              <input type="button" value="users get here" id="button2">
+      
+
+    </main>
+
+    <footer class="text-muted" ng-hide=isLoginPage>
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+      </div>
+    </footer>
+
+
+
+
+</body>
+</html>
