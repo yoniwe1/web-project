@@ -12,17 +12,17 @@
       <p>Please fill in this form to create an account.</p>
       <hr>
       
-      <label for="username"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="username" maxlength="10" required autofocus>
+      	<label for="username"><b>Username</b></label><span class="label star">*</span>
+      	<input type="text" placeholder="Enter Username" id="username" name="username" maxlength="10" required autofocus>
       
       <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"><br>
+      <input type="text" placeholder="Enter Email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"><br>
      
       <label for="address"><b>Address</b></label>
       <input type="text" placeholder="Street Address" name="street address">
-      <input type="text" placeholder="Zipcode" name="zipcode" size="7" pattern="[0-9]{7}">
-      <input type="text" placeholder="City" name="city" pattern="[a-zA-Z ]*">
-      <input type="text" placeholder="Country" name="country" value="Israel"><br>
+      <input type="text" placeholder="Zipcode" id="zipcode" name="zipcode" maxlength="7" pattern="[0-9]{7}">
+      <input type="text" placeholder="City" id="city" name="city" pattern="[a-zA-Z ]*">
+      <input type="text" placeholder="Country" name="country" value="Israel" disabled><br>
       
       <label for="phone"><b>Phone Number</b></label><br>	
 	  <select name="areacode">
@@ -32,22 +32,33 @@
       	<option value="08">08</option>
       	<option value="09">09</option>
   	  </select>
-  	  <input type="text" placeholder="Phone Number" name="phonenumber" pattern="[0-9]{7}"><br>
+  	  <input type="text" placeholder="Phone Number" id="phonenumber" name="phonenumber" maxlength="7" pattern="[0-9]{7}"><br>
   	  
-  	  <label for="nickname"><b>Nickname</b></label>
-      <input type="text" placeholder="Enter Nickname" name="nickname" maxlength="20" size="20" required><br>
+  	  <label for="cellphone"><b>Cell Phone Number</b></label><br>	
+	  <select name="cellcode">
+   	  	<option value="05" selected>050</option>
+      	<option value="052">052</option>
+      	<option value="053">053</option>
+      	<option value="054">054</option>
+      	<option value="058">058</option>
+  	  </select>
+  	  <input type="text" placeholder="Cell Phone Number" id="cellphonenumber" name="cellphonenumber" maxlength="7" pattern="[0-9]{7}"><br>
+  	  
+  	  
+  	  <label for="nickname"><b>Nickname</b></label><span class="label star">*</span>
+      <input type="text" placeholder="Enter Nickname" id="nickname" name="nickname" maxlength="20" required><br>
       
       <label for="description"><b>Short Description</b></label>
-      <input type="text" placeholder="Short Description" name="description" maxlength="50" size="50"><br>
+      <input type="text" placeholder="Short Description" name="description" maxlength="50"><br>
       
 	  <label for="photo"><b>Photo</b></label>
       <input type="url" placeholder="Enter URL To Photo" name="photo"><br>
   	  
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" maxlength="8" required>
+      <label for="psw"><b>Password</b></label><span class="label star">*</span>
+      <input type="password" placeholder="Enter Password" id="psw" name="psw" maxlength="8" required>
 
-      <label for="psw-repeat"><b>Repeat Password</b></label>
-      <input type="password" placeholder="Repeat Password" name="psw-repeat" maxlength="8" required>
+      <label for="psw-repeat"><b>Repeat Password</b></label><span class="label star">*</span>
+      <input type="password" placeholder="Repeat Password" id="psw-repeat" name="psw-repeat" maxlength="8" required>
       
       <label>
         <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
@@ -56,9 +67,11 @@
 
       <div class="clearfix">
         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        <button type="submit" class="signupbtn">Sign Up</button>
+        <button type="submit" class="signupbtn" onclick="validateForm()">Sign Up</button>
       </div>
     </div>
+     <p id="message"></p>
     </form>
+    <script src="Pages/JavaScript/scripts.js"></script>
 </body>
 </html>

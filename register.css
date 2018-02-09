@@ -16,13 +16,18 @@ select{
     border: 1px solid #ccc;
     box-sizing: border-box;
 }
-input[name=phonenumber]{
+input[name=phonenumber], input[name=cellphonenumber]{
 	width: 79%;
 	padding: 12px 20px;
 	margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+.label{
+}
+.star {
+		color: red;
 }
 #btnLogin {
     width: auto;
