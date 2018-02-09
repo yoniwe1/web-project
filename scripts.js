@@ -33,22 +33,47 @@ function validateForm() {
 	    	message.innerHTML = "Username is a required field";
 	    	return false;
 	    }
+	    else if (!email.value){
+	    	alert("Email is a required field");
+	    	message.innerHTML = "Email is a required field";
+	    	return false;
+	    }
 	    else if ((emailPattern.test(email.value) == false) && (email.value)){
 	    	alert("Email must be of the format: user@domain");
 	    	message.innerHTML = "Email must be of the format: user@domain";
+	    	return false;
+	    }
+	    else if (!zipcode.value){
+	    	alert("Zipcode is a required field");
+	    	message.innerHTML = "Zipcode is a required field";
 	    	return false;
 	    }
 	    else if ((zip_phonePattern.test(zipcode.value) == false) && (zipcode.value)){
 	    	alert("Zipcode must contain exactly 7 digits");
 	    	message.innerHTML = "Zipcode must contain exactly 7 digits";
 	    }
+	    else if (!city.value){
+	    	alert("City is a required field");
+	    	message.innerHTML = "City is a required field";
+	    	return false;
+	    }
 	    else if ((cityPattern.test(city.value) == false) && (city.value)){
 	    	alert("City must contain only uppercase and lowercase letters");
 	    	message.innerHTML = "City must contain only uppercase and lowercase letters";
 	    }
+	    else if (!phonenumber.value){
+	    	alert("Phone number is a required field");
+	    	message.innerHTML = "Phone number is a required field";
+	    	return false;
+	    }
 	    else if ((zip_phonePattern.test(phonenumber.value) == false) && (phonenumber.value)){
 	    	alert("Phone number must contain exactly 7 digits");
 	    	message.innerHTML = "Phone number must contain exactly 7 digits";
+	    }
+	    else if (!cellphonenumber.value){
+	    	alert("Cell phone number is a required field");
+	    	message.innerHTML = "Cell phone number is a required field";
+	    	return false;
 	    }
 	    else if ((zip_phonePattern.test(cellphonenumber.value) == false) && (cellphonenumber.value)){
 	    	alert("Cell Phone number must contain exactly 7 digits");

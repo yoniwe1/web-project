@@ -15,16 +15,16 @@
       	<label for="username"><b>Username</b></label><span class="label star">*</span>
       	<input type="text" placeholder="Enter Username" id="username" name="username" maxlength="10" required autofocus>
       
-      <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="Enter Email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"><br>
+      <label for="email"><b>Email</b></label><span class="label star">*</span>
+      <input type="text" placeholder="Enter Email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" required><br>
      
-      <label for="address"><b>Address</b></label>
-      <input type="text" placeholder="Street Address" name="street address">
-      <input type="text" placeholder="Zipcode" id="zipcode" name="zipcode" maxlength="7" pattern="[0-9]{7}">
-      <input type="text" placeholder="City" id="city" name="city" pattern="[a-zA-Z ]*">
+      <label for="address"><b>Address</b></label><span class="label star">*</span>
+      <input type="text" placeholder="Street Address" name="street address" required>
+      <input type="text" placeholder="Zipcode" id="zipcode" name="zipcode" maxlength="7" pattern="[0-9]{7}" required>
+      <input type="text" placeholder="City" id="city" name="city" pattern="[a-zA-Z ]*" required>
       <input type="text" placeholder="Country" name="country" value="Israel" disabled><br>
       
-      <label for="phone"><b>Phone Number</b></label><br>	
+      <label for="phone"><b>Phone Number</b></label><span class="label star">*</span><br>
 	  <select name="areacode">
    	  	<option value="02" selected>02</option>
       	<option value="03">03</option>
@@ -32,9 +32,9 @@
       	<option value="08">08</option>
       	<option value="09">09</option>
   	  </select>
-  	  <input type="text" placeholder="Phone Number" id="phonenumber" name="phonenumber" maxlength="7" pattern="[0-9]{7}"><br>
+  	  <input type="text" placeholder="Phone Number" id="phonenumber" name="phonenumber" maxlength="7" pattern="[0-9]{7}" required><br>
   	  
-  	  <label for="cellphone"><b>Cell Phone Number</b></label><br>	
+  	  <label for="cellphone"><b>Cell Phone Number</b></label><span class="label star">*</span><br>	
 	  <select name="cellcode">
    	  	<option value="05" selected>050</option>
       	<option value="052">052</option>
@@ -42,7 +42,7 @@
       	<option value="054">054</option>
       	<option value="058">058</option>
   	  </select>
-  	  <input type="text" placeholder="Cell Phone Number" id="cellphonenumber" name="cellphonenumber" maxlength="7" pattern="[0-9]{7}"><br>
+  	  <input type="text" placeholder="Cell Phone Number" id="cellphonenumber" name="cellphonenumber" maxlength="7" pattern="[0-9]{7}" required><br>
   	  
   	  
   	  <label for="nickname"><b>Nickname</b></label><span class="label star">*</span>
